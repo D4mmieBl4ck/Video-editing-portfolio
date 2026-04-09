@@ -9,7 +9,7 @@ const VIDEOS = [
     desc: "Transformed a raw 45-min interview into a 3-part content series",
     tag: "Personal Brand",
     color: "#1A56DB",
-    embed: "https://youtube.com/shorts/cYUkHxXB3Sk?si=bvaySNaCxVQi9O33",
+    embed: "https://youtube.com/embed/cYUkHxXB3Sk?si=bvaySNaCxVQi9O33",
   },
   {
     id: 2,
