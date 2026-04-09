@@ -5,8 +5,8 @@ const NAV_LINKS = ["Work", "About", "Testimonials", "Contact"];
 const VIDEOS = [
   {
     id: 1,
-    title: "The Founder's Story",
-    desc: "Transformed a raw 45-min interview into a 3-part content series",
+    title: "Cybersecurity News",
+    desc: "Transformed a raw 2-min cybersecurity news video into a clean and engaging video.",
     tag: "Personal Brand",
     color: "#1A56DB",
     embed: "https://www.youtube.com/embed/shorts/cYUkHxXB3Sk?si=bvaySNaCxVQi9O33",
