@@ -197,7 +197,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 1 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: dark ? "rgba(26,86,219,0.1)" : "rgba(26,86,219,0.15)", border: `1px solid rgba(26,86,219,0.25)`, borderRadius: 20, padding: "6px 14px", marginBottom: 32, fontSize: 13, fontWeight: 500, color: accent, animation: "float 4s ease-in-out infinite" }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: accent, display: "inline-block" }} />
-            Available for new projects · 2025
+            Available for new projects · 2026
           </div>
 
           <h1 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(42px, 7vw, 88px)", lineHeight: 1.04, letterSpacing: "-2px", marginBottom: 28, maxWidth: 820 }}>
