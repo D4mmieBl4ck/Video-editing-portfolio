@@ -17,7 +17,7 @@ const VIDEOS = [
     desc: "Rebuilt a generic talking-head into a scroll-stopping LinkedIn clip",
     tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.youtube.com/embed/9bZkp7q19f0",
+    embed: "https://www.drive.google.com/file/d/1j2Fzpbq9IDVm7eTLALxT9T2RvWVc9szR/preview",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const VIDEOS = [
     desc: "Turned a 1-hour webinar into 12 short-form educational clips",
     tag: "Educational",
     color: "#1A56DB",
-    embed: "https://www.youtube.com/embed/jNQXAC9IVRw",
+    embed: "https://www.drive.google.com/file/d/1kjYeSMPX9JMnum7W_3woaDef-Iek16e4/preview",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const VIDEOS = [
     desc: "A 27-second Instagram reel that drove 4,000 DMs in 48 hours",
     tag: "Short-Form",
     color: "#1A56DB",
-    embed: "https://www.youtube.com/embed/M7lc1UVf-VE",
+    embed: "https://www.drive.google.com/file/d/1oXyZ40BnCMK6ChJQC6gTnfs-eqSRrNUY/preview",
   },
   {
     id: 5,
@@ -49,21 +49,21 @@ const TESTIMONIALS = [
   {
     name: "Temitope Ajanaku",
     role: "Prompt & Chip · YouTube · 17K+ Views",
-    text: "The editing completely transformed my channel. My videos now have a professional, polished look that keeps viewers watching till the end. The hook-driven approach brought in 17K+ views on my last upload alone.",
+    text: "This turned out beautifully. You really did an amazing job with the editing, and I can see the effort and creativity you put into every part of it. Everything flows so well and looks very professional. Honestly, you deserve a bonus for this one.",
     stars: 5,
     avatar: "TA",
   },
   {
     name: "Temitope Ajanaku",
     role: "Prompt & Chip · YouTube · 17K+ Views",
-    text: "What stood out most was the strategy behind every edit. It wasn't just about cuts and transitions — it was about keeping attention and delivering value. My audience grew significantly after we started working together.",
+    text: "I absolutely love it. The editing, pacing, and overall feel of the video came together perfectly. It looks clean, engaging, and exactly how I wanted it to feel. You really brought the idea to life.",
     stars: 5,
     avatar: "TA",
   },
   {
     name: "Temitope Ajanaku",
     role: "Prompt & Chip · YouTube · 17K+ Views",
-    text: "I finally feel like my content represents the quality of my brand. The before-and-after difference was night and day. If you're serious about growing on YouTube, this is exactly the kind of editor you need.",
+    text: "This came out way better than I imagined. I honestly did not expect it to look this good. Everything from the editing style to the flow and presentation feels so professional. Thank you so much for bringing the vision to life so perfectly.",
     stars: 5,
     avatar: "TA",
   },
@@ -411,7 +411,7 @@ function VideoCard({ v, card, border, fg, muted, accent, dark }) {
       <div style={{ position: "relative", paddingBottom: "56.25%", background: dark ? "#111" : "#E8E5E0" }}>
         {playing ? (
           <iframe
-            src={`${v.embed}?autoplay=1&mute=1`}
+            src={`${v.embed}`}
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
             allow="autoplay; fullscreen"
             title={v.title}
