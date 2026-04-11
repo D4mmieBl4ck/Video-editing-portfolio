@@ -5,43 +5,43 @@ const NAV_LINKS = ["Work", "About", "Testimonials", "Contact"];
 const VIDEOS = [
   {
     id: 1,
-    title: "Cybersecurity News",
-    desc: "Transformed a raw 2-min cybersecurity news video into a clean and engaging video.",
-    tag: "Personal Brand",
+    title: "Cybersecurity News Video",
+    desc: "A clean and engaging edit covering the latest cybersecurity updates, digital threats, and important news happening in the tech space.",
+    tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.youtube.com/embed/shorts/cYUkHxXB3Sk?si=bvaySNaCxVQi9O33",
+    embed: "https://www.youtube.com/embed/cYUkHxXB3Sk",
   },
   {
     id: 2,
-    title: "Hook-First Reframe",
-    desc: "Rebuilt a generic talking-head into a scroll-stopping LinkedIn clip",
+    title: "Crypto Currencies Awareness Video",
+    desc: "A fast-paced and informative video focused on crypto trends, market updates, and key insights in the world of digital currency.",
     tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.drive.google.com/file/d/1j2Fzpbq9IDVm7eTLALxT9T2RvWVc9szR/preview",
+    embed: "https://drive.google.com/file/d/1j2Fzpbq9IDVm7eTLALxT9T2RvWVc9szR/preview",
   },
   {
     id: 3,
-    title: "The Educator Series",
-    desc: "Turned a 1-hour webinar into 12 short-form educational clips",
-    tag: "Educational",
+    title: "Women Motivation Video",
+    desc: "An inspiring and powerful video created to encourage confidence, strength, growth, and the importance of women owning their voice and value.",
+    tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.drive.google.com/file/d/1kjYeSMPX9JMnum7W_3woaDef-Iek16e4/preview",
+    embed: "https://drive.google.com/file/d/1kjYeSMPX9JMnum7W_3woaDef-Iek16e4/preview",
   },
   {
     id: 4,
-    title: "Reel That Sold Out",
-    desc: "A 27-second Instagram reel that drove 4,000 DMs in 48 hours",
-    tag: "Short-Form",
+    title: "Faith in God Video",
+    desc: "A meaningful and uplifting video centered around faith, trusting God, and staying encouraged through every season of life.",
+    tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.drive.google.com/file/d/1oXyZ40BnCMK6ChJQC6gTnfs-eqSRrNUY/preview",
+    embed: "https://drive.google.com/file/d/1oXyZ40BnCMK6ChJQC6gTnfs-eqSRrNUY/preview",
   },
   {
     id: 5,
-    title: "Brand Voice System",
-    desc: "Built a repeatable content framework for a 7-figure coach",
-    tag: "Strategy-Led Content",
+    title: "Managing Finances Video",
+    desc: "A practical and value-driven video focused on budgeting, saving money, spending wisely, and building better financial habits.",
+    tag: "Talking-Head",
     color: "#1A56DB",
-    embed: "https://www.youtube.com/embed/ysz5S6PUM-U",
+    embed: "https://drive.google.com/file/d/1U0MTEtiaI23kJe--kpPxUDt7lasH_DBk/preview",
   },
 ];
 
@@ -49,14 +49,7 @@ const TESTIMONIALS = [
   {
     name: "Temitope Ajanaku",
     role: "Prompt & Chip · YouTube · 17K+ Views",
-    text: "This turned out beautifully. You really did an amazing job with the editing, and I can see the effort and creativity you put into every part of it. Everything flows so well and looks very professional. Honestly, you deserve a bonus for this one.",
-    stars: 5,
-    avatar: "TA",
-  },
-  {
-    name: "Temitope Ajanaku",
-    role: "Prompt & Chip · YouTube · 17K+ Views",
-    text: "I absolutely love it. The editing, pacing, and overall feel of the video came together perfectly. It looks clean, engaging, and exactly how I wanted it to feel. You really brought the idea to life.",
+    text: "This is really good. Thank you so much for putting this together so well. The final result looks polished, professional, and much better than I expected. I appreciate the attention to detail.",
     stars: 5,
     avatar: "TA",
   },
@@ -64,6 +57,13 @@ const TESTIMONIALS = [
     name: "Temitope Ajanaku",
     role: "Prompt & Chip · YouTube · 17K+ Views",
     text: "This came out way better than I imagined. I honestly did not expect it to look this good. Everything from the editing style to the flow and presentation feels so professional. Thank you so much for bringing the vision to life so perfectly.",
+    stars: 5,
+    avatar: "TA",
+  },
+  {
+    name: "Temitope Ajanaku",
+    role: "Prompt & Chip · YouTube · 17K+ Views",
+    text: "This turned out beautifully. You really did an amazing job with the editing, and I can see the effort and creativity you put into every part of it. Everything flows so well and looks very professional. Honestly, you deserve a bonus for this one.",
     stars: 5,
     avatar: "TA",
   },
@@ -197,7 +197,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 1 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: dark ? "rgba(26,86,219,0.1)" : "rgba(26,86,219,0.15)", border: `1px solid rgba(26,86,219,0.25)`, borderRadius: 20, padding: "6px 14px", marginBottom: 32, fontSize: 13, fontWeight: 500, color: accent, animation: "float 4s ease-in-out infinite" }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: accent, display: "inline-block" }} />
-            Available for new projects · 2026
+            Available for new projects · 2025
           </div>
 
           <h1 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(42px, 7vw, 88px)", lineHeight: 1.04, letterSpacing: "-2px", marginBottom: 28, maxWidth: 820 }}>
@@ -377,27 +377,36 @@ export default function App() {
   );
 }
 
+// Helper: extract YouTube video ID from embed URL
+function getYoutubeThumbnail(embedUrl) {
+  const match = embedUrl.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/);
+  return match ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg` : null;
+}
+
+// Helper: detect if URL is Google Drive
+function isGoogleDrive(embedUrl) {
+  return embedUrl.includes("drive.google.com");
+}
+
+// Helper: build clean embed src (no autoplay — click to play)
+function buildEmbedSrc(embedUrl) {
+  if (isGoogleDrive(embedUrl)) {
+    // Drive preview URLs work as-is
+    return embedUrl;
+  }
+  // YouTube: add rel=0 to hide suggested videos, no autoplay
+  return `${embedUrl}?rel=0`;
+}
+
 function VideoCard({ v, card, border, fg, muted, accent, dark }) {
   const [hovered, setHovered] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const cardRef = useRef(null);
 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !playing) {
-          setPlaying(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (cardRef.current) obs.observe(cardRef.current);
-    return () => obs.disconnect();
-  }, [playing]);
+  const thumbnail = getYoutubeThumbnail(v.embed);
+  const isDrive = isGoogleDrive(v.embed);
 
   return (
     <div
-      ref={cardRef}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -407,21 +416,59 @@ function VideoCard({ v, card, border, fg, muted, accent, dark }) {
         boxShadow: hovered ? (dark ? "0 24px 60px rgba(0,0,0,0.6)" : "0 24px 60px rgba(0,0,0,0.1)") : "none",
       }}
     >
-      {/* Video embed */}
-      <div style={{ position: "relative", paddingBottom: "56.25%", background: dark ? "#111" : "#E8E5E0" }}>
+      {/* Video area */}
+      <div style={{ position: "relative", paddingBottom: "56.25%", background: dark ? "#111" : "#E8E5E0", cursor: "pointer" }}>
         {playing ? (
+          /* Once clicked — load the real iframe */
           <iframe
-            src={`${v.embed}`}
+            src={buildEmbedSrc(v.embed)}
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
-            allow="autoplay; fullscreen"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowFullScreen
             title={v.title}
           />
         ) : (
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-            <div style={{ width: 52, height: 52, borderRadius: "50%", background: accent, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21" /></svg>
+          /* Before click — show thumbnail (YouTube) or branded placeholder (Drive) */
+          <div
+            onClick={() => setPlaying(true)}
+            style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 8 }}
+          >
+            {/* Background thumbnail for YouTube */}
+            {thumbnail && (
+              <img
+                src={thumbnail}
+                alt={v.title}
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.7 }}
+              />
+            )}
+
+            {/* Dark overlay */}
+            <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
+
+            {/* Play button */}
+            <div style={{
+              position: "relative", zIndex: 1,
+              width: 60, height: 60, borderRadius: "50%",
+              background: accent,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              boxShadow: `0 6px 24px rgba(26,86,219,0.5)`,
+              transition: "transform 0.2s",
+              transform: hovered ? "scale(1.12)" : "scale(1)",
+            }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+                <polygon points="5,3 19,12 5,21" />
+              </svg>
             </div>
-            <span style={{ color: dark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.35)", fontSize: 12, marginTop: 10, fontWeight: 400 }}>Loading...</span>
+
+            {/* Label */}
+            <span style={{
+              position: "relative", zIndex: 1,
+              color: "#fff", fontSize: 12, fontWeight: 500,
+              background: "rgba(0,0,0,0.5)", borderRadius: 20,
+              padding: "4px 12px", marginTop: 4,
+            }}>
+              {isDrive ? "Click to play" : "Click to play"}
+            </span>
           </div>
         )}
       </div>
